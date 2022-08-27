@@ -1,0 +1,169 @@
+body{
+    min-height: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://i.pinimg.com/originals/1e/f3/30/1ef3305f1c3f222cb236c4c9a667056f.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.main{
+    width: 500px;
+    height: 320px;
+    background-color: rgba(109, 107, 107, 0.8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.bi-list-task{
+    margin-top: 40px;
+}
+.initialText{
+    display: block;
+    font-size: 40px;
+}
+.bi-check2-circle{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+    color: white;
+}
+h1{
+    text-align: center;
+    font-size: 65px;
+    color: rgb(255, 255, 255);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#item{
+    width: 450px;
+    height: 45px;
+    background: transparent;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+#item::placeholder{
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+}
+#submit{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    cursor: pointer;
+}
+#submit:hover{
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 45px;
+    transition: 0.3s ease-in;
+}
+#list{
+    margin-top: 10px;
+    width: 500px;
+    height: 320px;
+    font-size: 20px;
+    overflow-y: auto;
+}
+#list::-webkit-scrollbar{
+    width: 10px;
+}
+#list::-webkit-scrollbar-thumb{
+    background-color: rgba(3, 3, 3, 0.3);
+}
+#list::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#list .listItem{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    font-size: 35px;
+    padding: 5px 5px 5px 10px;
+    color: rgb(5, 29, 248);
+}
+#clear{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 50%;
+    background-color: rgb(156, 39, 39);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+#edit{
+    width: 65px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(59, 56, 56, 0.5);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(3, 3, 3, 0.3);
+    transform: translate(0px,0px);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-grid;
+    place-content: center;
+}
+input[type="checkbox"]::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 8%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 0.3s transform ease-in-out;
+    box-shadow: inset 1em 1em rgb(64, 59, 232);
+}
+input[type="checkbox"]:checked::before{
+    transform: scale(1);
+}
+input[type="checkbox"]:checked ~ .inp{
+    text-decoration: line-through;
+    color: red;
+    transition: 0.3s ease-in-out;
+}
+.inp{
+    width: 250px;
+    height: 40px;
+    font-size: 30px;
+    display: inline;
+    cursor: pointer;
+    background: transparent;
+    border: 1px rgba(255, 255, 255, 0.8);
+    color:rgb(64, 59, 232);
+}
